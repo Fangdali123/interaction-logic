@@ -12,12 +12,8 @@ var moveAxisSlider;
 var sinAngleMultiplySlider;
 var angleDeltaSlider;
 
-let canvasSize;
-
 
 function setup() {
-
-  
 
   dotsCountSlider = createSlider(200, 1000,400,10);
   dotsCountSlider.position(40, 40);
@@ -37,9 +33,7 @@ function setup() {
 
   
 
-  canvasSize = 800;
-
-  createCanvas(canvasSize, canvasSize);
+  createCanvas(windowWidth, windowHeight);
   //base radius
  dotsRadius = 0.1;
   //angle
@@ -84,7 +78,7 @@ function drawDots(dAngle,dCount,dR){
   for(let i=0;i < dCount;i++){
     angle += angleDeltaSlider.value() / dR; //orinial:5/dR
     stroke(255,255*(1- i/dCount));
-    point(cos(angle)*dR+canvasSize/2,sin(angle)*dR+canvasSize/2);
+    point(cos(angle)*dR+windowWidth/2,sin(angle)*dR+windowHeight/2);
     //console.log(cos(angle)*dR+500);
     dR = dR + 0.5 + sin(angle*sinAngleMultiplySlider.value()) * moveAxisSlider.value();
   }
