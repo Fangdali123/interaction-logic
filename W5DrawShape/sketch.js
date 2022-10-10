@@ -15,7 +15,7 @@ var angleDeltaSlider;
 
 function setup() {
 
-  dotsCountSlider = createSlider(200, 1000,400,10);
+  dotsCountSlider = createSlider(200, 5000,1000,10);
   dotsCountSlider.position(40, 40);
   dotsCountSlider.addClass("mySliders");
   
