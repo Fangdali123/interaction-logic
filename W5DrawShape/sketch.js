@@ -16,7 +16,7 @@ var dotRadiusSlider;
 
 function setup() {
 
-  dotsCountSlider = createSlider(200, 5000,1000,10);
+  dotsCountSlider = createSlider(200, 2500,1000,10);
   dotsCountSlider.position(40, 40);
   dotsCountSlider.addClass("mySliders");
   
@@ -81,7 +81,7 @@ function drawDots(dAngle,dCount,dR){
   let angle = dAngle;
   for(let i=0;i < dCount;i++){
     angle += angleDeltaSlider.value() / dR; //orinial:5/dR
-    //stroke();
+    noStroke();
     fill(255,255*(1- i/dCount))
     circle(cos(angle)*dR+windowWidth/2,sin(angle)*dR+windowHeight/2, dotRadiusSlider.value());
     //console.log(cos(angle)*dR+500);
