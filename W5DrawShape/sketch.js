@@ -12,6 +12,7 @@ var moveAxisSlider;
 var sinAngleMultiplySlider;
 var angleDeltaSlider;
 var dotRadiusSlider;
+var randomJiggleSlider;
 
 
 function setup() {
@@ -35,6 +36,10 @@ function setup() {
   dotRadiusSlider = createSlider(2, 100, 2, 0.1);
   dotRadiusSlider.position(40, 200);
   dotRadiusSlider.addClass("mySliders");
+
+  randomJiggleSlider = createSlider(1, 1.6, 1, 0.01);
+  randomJiggleSlider.position(40, 240);
+  randomJiggleSlider.addClass("mySliders");
 
 
   createCanvas(windowWidth, windowHeight);
@@ -81,9 +86,9 @@ function drawDots(dAngle,dCount,dR){
   let angle = dAngle;
   for(let i=0;i < dCount;i++){
     angle += angleDeltaSlider.value() / dR; //orinial:5/dR
-    noStroke();
-    fill(255,255*(1- i/dCount))
-    circle(cos(angle)*dR+windowWidth/2,sin(angle)*dR+windowHeight/2, dotRadiusSlider.value());
+    stroke(0.1);
+    fill(255,255*(1- i/dCount));
+    circle(random(1,randomJiggleSlider.value())*cos(angle)*dR+windowWidth/2,random(1,randomJiggleSlider.value())*sin(angle)*dR+windowHeight/2, dotRadiusSlider.value());
     //console.log(cos(angle)*dR+500);
     dR = dR + 0.5 + sin(angle*sinAngleMultiplySlider.value()) * moveAxisSlider.value();
   }
