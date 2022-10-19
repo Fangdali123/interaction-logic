@@ -28,6 +28,7 @@ function setup() {
   
   refVid = createVideo("./referenceVid.mp4");
   refVid.scale =(1,1);
+  refVid.loop();
   refVid.showControls();
   refVid.autoplay(true);
 }
