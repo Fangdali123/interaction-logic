@@ -3,7 +3,7 @@ Fan Fang's Home Work Links
 
 
 
-## Week 7:
+## Week 6:
 ###### Pixel display:
 - https://fangdali123.github.io/interaction-logic/W7CustomPixelDisplay/
 ###### Code: 
