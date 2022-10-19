@@ -7,7 +7,7 @@ Fan Fang's Home Work Links
 ###### Pixel display:
 - https://fangdali123.github.io/interaction-logic/W7CustomPixelDisplay/
 ###### Code: 
-- https://github.com/Fangdali123/interaction-logic/blob/main/W5DrawShape/sketch.js
+- https://github.com/Fangdali123/interaction-logic/blob/main/W7CustomPixelDisplay/sketch.js
 
 
 ## Week 5:
