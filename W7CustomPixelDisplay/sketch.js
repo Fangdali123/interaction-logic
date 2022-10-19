@@ -7,7 +7,7 @@ let gridMinY = 160;
 
 let gridMaxX = gridMinX + gridSize * gridCount;
 let gridMaxY = gridMinY + gridSize * gridCount;
-let scale = 1.7;
+let scale = 1.9;
 
 
 function setup() {
@@ -53,6 +53,7 @@ function draw() {
         //find which grid is the pixel falls in
         let gridXIndex = floor((x - gridMinX) / gridSize);
         let gridYIndex = floor((y - gridMinY) / gridSize);
+
         //find center corrdinate of the grid 
         let gridCenterX = gridMinX + (gridXIndex + 0.5) * gridSize;
         let gridCenterY = gridMinY + (gridYIndex + 0.5) * gridSize;
