@@ -1,8 +1,9 @@
 let vid;
+let refVid;
 let gridSize = 60;
 let gridCount = 3;
-let gridMinX = 80;
-let gridMinY = 140;
+let gridMinX = 100;
+let gridMinY = 160;
 
 let gridMaxX = gridMinX + gridSize * gridCount;
 let gridMaxY = gridMinY + gridSize * gridCount;
@@ -10,8 +11,13 @@ let scale = 1.7;
 
 
 function setup() {
+  
+
+
+
   createCanvas(400, 400);
   vid = createVideo("./mian1.mp4");
+  
   vid.size(400, 400);
   pixelDensity(1);
   vid.loop();
@@ -19,6 +25,11 @@ function setup() {
   vid.autoplay(true);
   //vid.hide();
   noStroke();
+  
+  refVid = createVideo("./referenceVid.mp4");
+  refVid.scale =(1,1);
+  refVid.showControls();
+  refVid.autoplay(true);
 }
 
 
