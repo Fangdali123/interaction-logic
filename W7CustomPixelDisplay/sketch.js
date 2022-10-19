@@ -15,7 +15,7 @@ function setup() {
   vid.size(400, 400);
   pixelDensity(1);
   vid.loop();
-  vid.hide();
+  //vid.hide();
   noStroke();
 }
 
