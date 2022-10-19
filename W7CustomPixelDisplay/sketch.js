@@ -7,7 +7,7 @@ let gridMinY = 160;
 
 let gridMaxX = gridMinX + gridSize * gridCount;
 let gridMaxY = gridMinY + gridSize * gridCount;
-let scale = 1.9;
+let scale = 1.3;
 
 
 function setup() {
