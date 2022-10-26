@@ -9,11 +9,16 @@ let gridMaxX = gridMinX + gridSize * gridCount;
 let gridMaxY = gridMinY + gridSize * gridCount;
 let scale = 1.3;
 
+let explainText;
 
 function setup() {
   
+explainText = 'I got inspired by this gif, so I tried to recreate it';
 
-
+//fill(50);
+  textSize(32);
+  
+  
 
   createCanvas(400, 400);
   vid = createVideo("./mian1.mp4");
@@ -35,6 +40,9 @@ function setup() {
 
 
 function draw() {
+  text(explainText, 500,30);
+  fill(0, 102, 153);
+
   background(0);
   vid.loadPixels();
   let pixelSize = 2;
