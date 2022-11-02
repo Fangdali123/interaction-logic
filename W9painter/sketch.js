@@ -173,7 +173,7 @@ function detectFace(){
         //   }
         //   endShape(CLOSE); 
         // }
-        // pop(); 
+         pop(); 
         
         //----------------------
         // Measure the openness of the eyes. Your mileage may vary. 
@@ -269,11 +269,19 @@ function startExplode() {
 
 function explode() {
   for (var dot of paintDots) {
+    //fill(200, 0, 0);
     var distanceX = dot.x - centerX;
     var distanceY = dot.y - centerY;
     var distance = sqrt(distanceX * distanceX + distanceY * distanceY);
     dot.x += distanceX / distance * explodeSpeed;
     dot.y += distanceY / distance * explodeSpeed;
+    
+    // if(keyPressed()){
+    //   //clear the array
+    //   paintDots = [];
+    //   //restart function
+    //   detectFace(); 
+    // }
     // stroke(255);
     // line(dot.x, dot.y, centerX, centerY);
   }
