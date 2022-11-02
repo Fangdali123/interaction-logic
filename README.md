@@ -2,7 +2,7 @@
 Fan Fang's Home Work Links
 
 ## Week 8:
-###### Pixel display:
+###### NosePainting:
 - https://fangdali123.github.io/interaction-logic/W9painter/
 
 ###### Code: 
